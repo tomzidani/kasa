@@ -1,0 +1,28 @@
+/*
+ * Footer
+ */
+.app-footer {
+  background: $black;
+  color: #fff;
+
+  .footer {
+    &__wrapper {
+      @include container;
+      padding: 60px 20px 30px 20px;
+
+      text-align: center;
+    }
+
+    &__logo {
+      max-width: 120px;
+
+      margin: 0 auto;
+    }
+
+    &__copyright {
+      margin-top: 25px;
+
+      font-size: 24px;
+    }
+  }
+}

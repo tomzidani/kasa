@@ -1,5 +1,13 @@
+import { Footer, Header } from "@components/layout"
+
 const App = () => {
-  return <div className="container">Hello</div>
+  return (
+    <>
+      <Header />
+
+      <Footer />
+    </>
+  )
 }
 
 export default App
