@@ -1,0 +1,53 @@
+/*
+ * Lodging card
+ */
+.lodging {
+  display: inline-block;
+  max-width: 340px;
+
+  border-radius: 10px;
+  background: $pink;
+
+  transition: ease-in-out 0.5s;
+
+  &:hover .lodging__overlay {
+    opacity: 1;
+  }
+
+  .lodging {
+    &__media {
+      position: relative;
+
+      aspect-ratio: 10/10;
+    }
+
+    &__image {
+      @include fullcover;
+
+      border-radius: 10px;
+    }
+
+    &__overlay {
+      @include fullcover;
+
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+
+      opacity: 0.8;
+      border-radius: 10px;
+
+      transition: ease-in-out 0.2s;
+    }
+
+    &__title {
+      position: absolute;
+      bottom: 0;
+      padding: 20px 0 20px 20px;
+      line-height: 1.5;
+      width: 75%;
+
+      color: #fff;
+
+      z-index: 2;
+    }
+  }
+}
