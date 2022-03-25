@@ -1,0 +1,32 @@
+/*
+ * Not found
+ */
+.app-notfound {
+  padding-top: 150px;
+
+  .notfound {
+    &__wrapper {
+      @include container;
+
+      text-align: center;
+    }
+
+    &__title {
+      @include montserrat--bold;
+      font-size: 288px;
+    }
+
+    &__text {
+      margin-top: 65px;
+
+      font-size: 36px;
+    }
+
+    &__link {
+      display: inline-block;
+      margin-top: 180px;
+
+      text-decoration: underline;
+    }
+  }
+}
