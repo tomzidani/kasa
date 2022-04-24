@@ -1,3 +1,4 @@
+import { Slider } from "@components/content"
 import { getLodging } from "@utils/helpers/data.helpers"
 import { LodgingType } from "@utils/helpers/types.helpers"
 import { useState } from "react"
@@ -19,6 +20,7 @@ const Lodging = () => {
       <div className="lodging__wrapper">
         {lodging && (
           <>
+            <Slider pictures={lodging.pictures} title={lodging.title} />
             <LodgingInformations lodging={lodging} />
             <LodgingDetails description={lodging.description} equipments={lodging.equipments} />
           </>

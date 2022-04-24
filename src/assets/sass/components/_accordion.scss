@@ -3,6 +3,7 @@
  */
 .accordion {
   position: relative;
+  min-height: 55px;
 
   .accordion {
     &__header {
@@ -38,7 +39,7 @@
       @include montserrat;
       background: $gray;
       border-radius: 10px;
-      transform-origin: top center;
+      overflow: hidden;
 
       transition: ease-in-out 0.2s;
 
@@ -57,7 +58,7 @@
       }
 
       &__body {
-        transform: scaleY(0);
+        height: 0;
       }
     }
   }

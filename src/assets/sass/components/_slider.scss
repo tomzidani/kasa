@@ -1,0 +1,68 @@
+/*
+ * Slider
+ */
+.slider {
+  .slider {
+    &__medias {
+      position: relative;
+      height: 0;
+      padding-bottom: 33.33%;
+    }
+
+    &__picture {
+      @include fullcover;
+
+      opacity: 0;
+      border-radius: 25px;
+
+      transition: ease-in-out 0.4s;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    &__previous,
+    &__next {
+      position: absolute;
+      top: 50%;
+
+      transition: ease-in-out 0.2s;
+
+      cursor: pointer;
+      z-index: 3;
+
+      > svg {
+        width: 70px;
+        height: auto;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &__previous {
+      left: 10px;
+
+      transform: translateY(-50%) rotate(-90deg);
+    }
+
+    &__next {
+      right: 10px;
+
+      transform: translateY(-50%) rotate(90deg);
+    }
+
+    &__count {
+      position: absolute;
+      width: 100%;
+      bottom: 25px;
+
+      color: $white;
+      text-align: center;
+
+      z-index: 3;
+    }
+  }
+}
