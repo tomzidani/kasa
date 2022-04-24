@@ -2,6 +2,7 @@ import { getLodging } from "@utils/helpers/data.helpers"
 import { LodgingType } from "@utils/helpers/types.helpers"
 import { useState } from "react"
 import { useParams } from "react-router-dom"
+import LodgingDetails from "./LodgingDetails"
 
 import LodgingInformations from "./LodgingInformations"
 
@@ -15,7 +16,14 @@ const Lodging = () => {
 
   return (
     <main className="app-lodging">
-      <div className="lodging__wrapper">{!lodging ? "Chargement" : <LodgingInformations lodging={lodging} />}</div>
+      <div className="lodging__wrapper">
+        {lodging && (
+          <>
+            <LodgingInformations lodging={lodging} />
+            <LodgingDetails description={lodging.description} equipments={lodging.equipments} />
+          </>
+        )}
+      </div>
     </main>
   )
 }

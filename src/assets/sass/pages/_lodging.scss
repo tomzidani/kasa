@@ -79,5 +79,17 @@
         }
       }
     }
+
+    &__details {
+      display: flex;
+      margin-top: 25px;
+
+      align-items: stretch;
+      justify-content: space-between;
+
+      .accordion {
+        width: calc(50% - 37.5px);
+      }
+    }
   }
 }

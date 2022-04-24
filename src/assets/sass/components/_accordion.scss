@@ -1,0 +1,64 @@
+/*
+ * Accordion
+ */
+.accordion {
+  position: relative;
+
+  .accordion {
+    &__header {
+      display: flex;
+      position: absolute;
+      width: calc(100% - 30px);
+      padding: 13px 10px 13px 20px;
+
+      align-items: center;
+      justify-content: space-between;
+      background: $pink;
+      color: $white;
+      border-radius: 10px;
+
+      transition: ease-in-out 0.2s;
+
+      cursor: pointer;
+      z-index: 1;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &__icon {
+      transition: ease-in-out 0.2s;
+    }
+
+    &__body {
+      position: relative;
+      height: 100%;
+
+      @include montserrat;
+      background: $gray;
+      border-radius: 10px;
+      transform-origin: top center;
+
+      transition: ease-in-out 0.2s;
+
+      .body {
+        &__wrapper {
+          padding: 80px 20px 40px 20px;
+        }
+      }
+    }
+  }
+
+  &.closed {
+    .accordion {
+      &__icon {
+        transform: rotate(180deg);
+      }
+
+      &__body {
+        transform: scaleY(0);
+      }
+    }
+  }
+}
