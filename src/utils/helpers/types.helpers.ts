@@ -1,4 +1,4 @@
-export type Lodging = {
+export type LodgingType = {
   id: string
   title: string
   cover: string
@@ -8,7 +8,7 @@ export type Lodging = {
     name: string
     picture: string
   }
-  rating: number
+  rating: string
   location: string
   equipments: string[]
   tags: string[]

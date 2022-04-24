@@ -1,11 +1,11 @@
-import { Lodging } from "@utils/helpers/types.helpers"
+import { LodgingType } from "@utils/helpers/types.helpers"
 import { Link } from "react-router-dom"
 
 interface LodgingCardProps {
-  lodging: Lodging
+  lodging: LodgingType
 }
 
-const LodgingCard = ({ lodging }: LodgingCardProps) => {
+const LodgingCard: React.FC<LodgingCardProps> = ({ lodging }) => {
   const { title, cover, id } = lodging
 
   return (

@@ -1,8 +1,8 @@
-import { useState } from "react"
+import { Key, useState } from "react"
 import { LodgingCard } from "@components/cards"
 import { getLodgings } from "@utils/helpers/data.helpers"
 import { isEmpty } from "@utils/helpers/validation.helpers"
-import { Lodging } from "@utils/helpers/types.helpers"
+import { LodgingType } from "@utils/helpers/types.helpers"
 
 import homeBanner from "@assets/img/home-banner.png"
 
@@ -20,8 +20,8 @@ const Home = () => {
         </section>
 
         <section className="home__lodgings">
-          {lodgings.map((l: Lodging) => (
-            <LodgingCard lodging={l} />
+          {lodgings.map((l: LodgingType, k: Key) => (
+            <LodgingCard lodging={l} key={k} />
           ))}
         </section>
       </div>

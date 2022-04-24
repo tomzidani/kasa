@@ -23,8 +23,14 @@
  */
 @import "./pages/notfound";
 @import "./pages/home";
+@import "./pages/lodging";
 
 /*
  * Cards
  */
 @import "./cards/lodging";
+
+/*
+ * Components
+ */
+@import "./components/tag";

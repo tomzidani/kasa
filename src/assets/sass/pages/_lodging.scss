@@ -1,0 +1,83 @@
+/*
+ * Lodging
+ */
+.app-lodging {
+  .lodging {
+    &__wrapper {
+      @include container;
+    }
+
+    &__infos {
+      .infos {
+        &__infos {
+          display: flex;
+
+          align-items: flex-start;
+          justify-content: space-between;
+        }
+
+        &__title {
+          font-size: 36px;
+        }
+
+        &__owner {
+          display: flex;
+          align-items: center;
+
+          .owner {
+            &__name {
+              width: 50%;
+              margin-left: auto;
+              margin-right: 10px;
+
+              text-align: right;
+            }
+
+            &__picture {
+              position: relative;
+              width: 64px;
+              height: 64px;
+
+              background: $gray-dark;
+              border-radius: 50%;
+
+              > img {
+                @include fullcover;
+
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+
+        &__details {
+          display: flex;
+          margin-top: 20px;
+
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        &__tags {
+          .tag:not(:last-child) {
+            margin-right: 10px;
+          }
+        }
+
+        &__rating {
+          svg {
+            fill: #e3e3e3;
+
+            &.active {
+              fill: $pink;
+            }
+
+            &:not(:last-child) {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
