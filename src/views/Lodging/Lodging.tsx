@@ -4,29 +4,25 @@ import { LodgingType } from "@utils/helpers/types.helpers"
 import { useState } from "react"
 import { useParams } from "react-router-dom"
 import LodgingDetails from "./LodgingDetails"
-
 import LodgingInformations from "./LodgingInformations"
+import { NotFound } from ".."
 
 const Lodging = () => {
-  const { lodgingId } = useParams<string>()
-  const [lodging, setLodging] = useState<LodgingType | undefined>(undefined)
+  const { lodgingUrl } = useParams<string>()
+  const lodgingId = lodgingUrl!.split("--")[1]
 
-  if (!lodging) setLodging(getLodging(lodgingId))
+  const [lodging, setLodging] = useState<LodgingType | null>(getLodging(lodgingId))
 
-  console.log(lodging)
-
-  return (
+  return lodging ? (
     <main className="app-lodging">
       <div className="lodging__wrapper">
-        {lodging && (
-          <>
-            <Slider pictures={lodging.pictures} title={lodging.title} />
-            <LodgingInformations lodging={lodging} />
-            <LodgingDetails description={lodging.description} equipments={lodging.equipments} />
-          </>
-        )}
+        <Slider pictures={lodging.pictures} title={lodging.title} />
+        <LodgingInformations lodging={lodging} />
+        <LodgingDetails description={lodging.description} equipments={lodging.equipments} />
       </div>
     </main>
+  ) : (
+    <NotFound />
   )
 }
 
