@@ -62,4 +62,34 @@
       }
     }
   }
+
+  @include mq($until: tablet) {
+    min-height: 30px;
+
+    .accordion {
+      &__header {
+        width: calc(100% - 20px);
+        padding: 5px 10px;
+
+        border-radius: 5px;
+        font-size: 13px;
+      }
+
+      &__icon > svg {
+        width: 15px;
+        height: 9px;
+      }
+
+      &__body {
+        font-size: 12px;
+        border-radius: 5px;
+
+        .body {
+          &__wrapper {
+            padding: 45px 10px 30px 10px;
+          }
+        }
+      }
+    }
+  }
 }

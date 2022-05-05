@@ -55,4 +55,25 @@
       }
     }
   }
+
+  @include mq($until: tablet) {
+    .header {
+      &__logo {
+        max-width: 145px;
+      }
+
+      &__nav {
+        > ul {
+          > li {
+            font-size: 12px;
+            text-transform: uppercase;
+
+            &:not(:last-child) {
+              margin-right: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

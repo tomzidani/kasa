@@ -65,4 +65,28 @@
       z-index: 3;
     }
   }
+
+  @include mq($until: tablet) {
+    .slider {
+      &__medias {
+        padding-bottom: 225px;
+      }
+
+      &__previous,
+      &__next {
+        > svg {
+          width: 12px;
+          height: 20px;
+        }
+      }
+
+      &__count {
+        display: none;
+      }
+
+      &__picture {
+        border-radius: 10px;
+      }
+    }
+  }
 }

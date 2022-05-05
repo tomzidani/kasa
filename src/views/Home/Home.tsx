@@ -20,9 +20,11 @@ const Home = () => {
         </section>
 
         <section className="home__lodgings">
-          {lodgings.map((l: LodgingType, k: Key) => (
-            <LodgingCard lodging={l} key={k} />
-          ))}
+          <div className="lodging__list">
+            {lodgings.map((l: LodgingType, k: Key) => (
+              <LodgingCard lodging={l} key={k} />
+            ))}
+          </div>
         </section>
       </div>
     </main>

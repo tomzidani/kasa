@@ -81,6 +81,14 @@
             }
           }
         }
+
+        &__mobile {
+          display: none;
+          margin-top: 15px;
+
+          align-items: center;
+          justify-content: space-between;
+        }
       }
     }
 
@@ -93,6 +101,81 @@
 
       .accordion {
         width: calc(50% - 37.5px);
+      }
+    }
+  }
+
+  @include mq($until: tablet) {
+    .lodging {
+      &__infos {
+        margin-top: 15px;
+
+        .infos {
+          &__infos > div {
+            width: 100%;
+          }
+          &__title {
+            font-size: 18px;
+          }
+
+          &__location {
+            font-size: 14px;
+          }
+
+          &__owner {
+            .owner {
+              &__name {
+                font-size: 12px;
+              }
+
+              &__picture {
+                width: 32px;
+                height: 32px;
+              }
+            }
+          }
+
+          &__rating > svg {
+            width: 15px;
+            height: 15px;
+
+            &:not(:last-child) {
+              margin-right: 5px;
+            }
+          }
+
+          &__infos,
+          &__details {
+            .infos {
+              &__owner,
+              &__rating {
+                display: none;
+              }
+            }
+          }
+
+          &__details {
+            margin-top: 0;
+          }
+
+          &__mobile {
+            display: flex;
+          }
+        }
+      }
+
+      &__details {
+        margin-top: 15px;
+
+        flex-direction: column;
+
+        .accordion {
+          width: 100%;
+
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+        }
       }
     }
   }

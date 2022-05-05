@@ -10,7 +10,6 @@ const Slider = ({ pictures, title }: SliderInterface) => {
   const mediasRef = useRef<any>()
   const [currentPicture, setCurrentPicture] = useState<number>(0)
 
-  const autoNavigate = () => setInterval(onNextClick, 10000)
   const onPreviousClick = () => (currentPicture - 1 < 0 ? setCurrentPicture(pictures.length - 1) : setCurrentPicture(currentPicture - 1))
   const onNextClick = () => (currentPicture + 1 > pictures.length - 1 ? setCurrentPicture(0) : setCurrentPicture(currentPicture + 1))
 
@@ -22,11 +21,7 @@ const Slider = ({ pictures, title }: SliderInterface) => {
 
       i === currentPicture && picture.classList.add("active")
     })
-
-    clearInterval(autoNavigate())
-  })
-
-  autoNavigate()
+  }, [currentPicture])
 
   return (
     <section className="slider">

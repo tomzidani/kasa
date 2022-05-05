@@ -38,4 +38,24 @@
       }
     }
   }
+
+  @include mq($until: tablet) {
+    .about {
+      &__banner {
+        border-radius: 10px;
+
+        .banner {
+          &__image {
+            border-radius: 10px;
+          }
+        }
+      }
+
+      &__accordion {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
 }

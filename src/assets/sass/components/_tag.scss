@@ -9,4 +9,12 @@
   background: $pink;
   color: $white;
   border-radius: 10px;
+
+  @include mq($until: desktop) {
+    min-width: 85px;
+    padding: 2px 20px;
+
+    font-size: 10px;
+    border-radius: 5px;
+  }
 }

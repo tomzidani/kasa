@@ -29,4 +29,24 @@
       text-decoration: underline;
     }
   }
+
+  @include mq($until: desktop) {
+    .notfound {
+      &__title {
+        font-size: 96px;
+      }
+
+      &__text {
+        margin-top: 10px;
+
+        font-size: 18px;
+      }
+
+      &__link {
+        margin-top: 130px;
+
+        font-size: 14px;
+      }
+    }
+  }
 }

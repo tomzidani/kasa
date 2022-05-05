@@ -27,4 +27,22 @@
       font-size: 24px;
     }
   }
+
+  @include mq($until: tablet) {
+    .footer {
+      &__wrapper {
+        padding: 60px 20px;
+      }
+
+      &__logo {
+        max-width: 120px;
+      }
+
+      &__copyright {
+        margin-top: 15px;
+
+        font-size: 12px;
+      }
+    }
+  }
 }
