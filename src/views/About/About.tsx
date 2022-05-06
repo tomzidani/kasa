@@ -1,8 +1,13 @@
 import { Accordion } from "@components/content"
+import { useEffect } from "react"
 
 import aboutBanner from "@assets/img/about-banner.png"
 
 const About = () => {
+  useEffect(() => {
+    document.title = "Kasa – À propos"
+  }, [])
+
   return (
     <main className="app-about">
       <div className="about__wrapper">

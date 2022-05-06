@@ -1,6 +1,11 @@
+import { useEffect } from "react"
 import { Link } from "react-router-dom"
 
 const NotFound = () => {
+  useEffect(() => {
+    document.title = "Kasa – 404"
+  }, [])
+
   return (
     <main className="app-notfound">
       <div className="notfound__wrapper">

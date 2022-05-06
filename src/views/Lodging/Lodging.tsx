@@ -1,7 +1,7 @@
 import { Slider } from "@components/content"
 import { getLodging } from "@utils/helpers/data.helpers"
 import { LodgingType } from "@utils/helpers/types.helpers"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import LodgingDetails from "./LodgingDetails"
 import LodgingInformations from "./LodgingInformations"
@@ -11,8 +11,11 @@ const Lodging = () => {
   const { lodgingUrl } = useParams<string>()
   const lodgingId = lodgingUrl!.split("--")[1]
 
-  const [lodging, setLodging] = useState<LodgingType | null>(getLodging(lodgingId))
+  const [lodging] = useState<LodgingType | null>(getLodging(lodgingId))
 
+  useEffect(() => {
+    document.title = lodging ? `Kasa — ${lodging.title}` : `Kasa — 404`
+  }, [lodging])
   return lodging ? (
     <main className="app-lodging">
       <div className="lodging__wrapper">

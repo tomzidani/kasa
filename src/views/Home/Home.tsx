@@ -1,4 +1,4 @@
-import { Key, useState } from "react"
+import { Key, useEffect, useState } from "react"
 import { LodgingCard } from "@components/cards"
 import { getLodgings } from "@utils/helpers/data.helpers"
 import { isEmpty } from "@utils/helpers/validation.helpers"
@@ -10,6 +10,10 @@ const Home = () => {
   const [lodgings, setLodgings] = useState<any>([])
 
   if (isEmpty(lodgings)) setLodgings(getLodgings())
+
+  useEffect(() => {
+    document.title = "Kasa – Location d'appartements entre particuliers"
+  }, [])
 
   return (
     <main className="app-home">
