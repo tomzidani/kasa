@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/kasa/static/css/main.34cb2001.css",
+    "main.js": "/kasa/static/js/main.d8753e90.js",
+    "static/js/787.0ce615c0.chunk.js": "/kasa/static/js/787.0ce615c0.chunk.js",
+    "static/media/about-banner.png": "/kasa/static/media/about-banner.3c09428adae894245445.png",
+    "static/media/home-banner.png": "/kasa/static/media/home-banner.bc8bbaf65a6c24b36455.png",
+    "static/media/Montserrat-Bold.woff": "/kasa/static/media/Montserrat-Bold.7c16a76f419ee381567f.woff",
+    "static/media/Montserrat-Medium.woff": "/kasa/static/media/Montserrat-Medium.8ec463288bf497884231.woff",
+    "static/media/Montserrat-Regular.woff": "/kasa/static/media/Montserrat-Regular.09fde6014b47c5c240ef.woff",
+    "static/media/Montserrat-Bold.woff2": "/kasa/static/media/Montserrat-Bold.f8c17acc995e1641698a.woff2",
+    "static/media/Montserrat-Medium.woff2": "/kasa/static/media/Montserrat-Medium.d3c7a3af691c4a8c8ecb.woff2",
+    "static/media/Montserrat-Regular.woff2": "/kasa/static/media/Montserrat-Regular.f8f945af5fd97fb10282.woff2",
+    "index.html": "/kasa/index.html",
+    "static/media/logo.svg": "/kasa/static/media/logo.be903176ef09a82dfb3df602cfa3b7dd.svg",
+    "static/media/caret.svg": "/kasa/static/media/caret.c60d2b97ddc4d1c0c39fdfca41df3f1e.svg",
+    "static/media/star.svg": "/kasa/static/media/star.12ae2cbe2bebfd545564c66c9be4aa23.svg",
+    "main.34cb2001.css.map": "/kasa/static/css/main.34cb2001.css.map",
+    "main.d8753e90.js.map": "/kasa/static/js/main.d8753e90.js.map",
+    "787.0ce615c0.chunk.js.map": "/kasa/static/js/787.0ce615c0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34cb2001.css",
+    "static/js/main.d8753e90.js"
+  ]
+}
