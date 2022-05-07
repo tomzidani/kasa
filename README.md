@@ -1,46 +1,25 @@
-# Getting Started with Create React App
+# Kasa
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Kasa](https://tomzidani.github.io/kasa/image.png)
 
-## Available Scripts
+Kasa is a school project whose main objective is to create a web application with [React](https://en.reactjs.org/) and [React-Router](https://reactrouter.com/) without using an external library.
 
-In the project directory, you can run:
+## Context
 
-### `npm start`
+This professionalizing project puts us in the shoes of a freelance front-end developer recruited to develop Kasa's new web platform.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Kasa has been in the private apartment rental business for almost 10 years. With more than 500 ads posted every day, Kasa is one of the leaders in private apartment rentals in France.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The site was coded more than 10 years ago in ASP.NET with significant legacy code. Laura, the CTO has therefore launched a total overhaul to move to a full stack in JavaScript with NodeJS on the back-end side and React on the front-end side.
 
-### `npm test`
+## Goals
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The goal of this project is to create a web application with [React](https://en.reactjs.org/) and [React-Router](https://reactrouter.com/) without using an external library, by integrating the [following models](https://www.figma.com/file/bAnXDNqRKCRRP8mY2gcb5p/UI-Design-Kasa-FR), and according to the [coding guidelines provided](https://course.oc-static.com/projects/Front-End+V2/P9+React+1/Coding+guidelines+Kasa+EN.pdf).
 
-### `npm run build`
+## Demo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The Kasa demo is available [here](https://tomzidani.github.io/kasa/).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## License
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
