@@ -11,11 +11,13 @@ const Lodging = () => {
   const { lodgingUrl } = useParams<string>()
   const lodgingId = lodgingUrl!.split("--")[1]
 
-  const [lodging] = useState<LodgingType | null>(getLodging(lodgingId))
+  const [lodging, setLodging] = useState<LodgingType | null>(null)
 
   useEffect(() => {
+    setLodging(getLodging(lodgingId))
     document.title = lodging ? `Kasa — ${lodging.title}` : `Kasa — 404`
-  }, [lodging])
+  }, [lodging, lodgingUrl, lodgingId])
+
   return lodging ? (
     <main className="app-lodging">
       <div className="lodging__wrapper">

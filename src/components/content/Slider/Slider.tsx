@@ -26,13 +26,17 @@ const Slider = ({ pictures, title }: SliderInterface) => {
   return (
     <section className="slider">
       <div className="slider__medias" ref={mediasRef}>
-        <div className="slider__previous" onClick={onPreviousClick}>
-          <Icon.Caret />
-        </div>
+        {pictures.length > 1 && (
+          <>
+            <div className="slider__previous" onClick={onPreviousClick}>
+              <Icon.Caret />
+            </div>
 
-        <div className="slider__next" onClick={onNextClick}>
-          <Icon.Caret />
-        </div>
+            <div className="slider__next" onClick={onNextClick}>
+              <Icon.Caret />
+            </div>
+          </>
+        )}
 
         <div className="slider__count">{`${currentPicture + 1}/${pictures.length}`}</div>
 
